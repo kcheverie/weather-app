@@ -1,0 +1,55 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="application.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+
+        <h1 class="text-center">weather</h1>
+        <div class="row">
+          <div class="form-group form-group-lg">
+              <input class="form-control" id="search-box" placeholder="City...">      
+          </div> 
+        </div>
+        <div class="row">
+        <div id="display-temperature" class="hidden">
+          <h2 class='text-center'>Current Temperature</h2>
+          
+        </div>
+          <ul id="search-results" class="list-unstyled">
+
+          </ul>
+          
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+
+
+
+
+  <script id="resultTemplate" type="text/x-handlebars-template">
+    <li>
+        <a class="city" id="city-name" data-city-link="{{l}}">{{name }}</a>
+    </li>
+  </script>
+
+
+
+
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.11.2/lodash.min.js"></script>
+  <script src="application.js"></script>
+</body>
+</html>
