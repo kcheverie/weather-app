@@ -54,13 +54,19 @@ function fetchTemperature($el) {
 
 function displayTemperature(data) {
   var temperature = data.temp_c;
+  var weather = data.weather;
+  var location = data.display_location.city + ", " + data.display_location.state + " " + data.display_location.country
   console.log(temperature);
   $("#display-temperature").html('');
 
-  var html = "<h2 class='text-center'>Current Temperature</h2>" +
-            "<h1 class='text-center'>" +
+  var html = "<h2 class='text-center'>" +
+              location +
+              "</h2>" +
+            "<h2 class='text-center'>" +
           temperature +
-          " Celcius</h1>";
+          " &deg;C" +
+          " and " + weather +
+          "</h2>";
   $('#display-temperature').removeClass('hidden'); 
   $('#display-temperature').append(html); 
   $('#search-results').addClass('hidden'); 
